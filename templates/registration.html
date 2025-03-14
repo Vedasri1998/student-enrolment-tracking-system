@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <style>
+        /* CSS styles for the registration form */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .registration-form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .registration-form h2 {
+            margin-top: 0;
+        }
+
+        .registration-form label,
+        .registration-form input[type="submit"] {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .return-home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .return-home-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="registration-form">
+            <h2>Student Registration</h2>
+            <form action="/create_account" method="POST">
+                <label for="new_username">Username:</label>
+                <input type="text" id="new_username" name="new_username" required>
+
+                <label for="new_password">Password:</label>
+                <input type="password" id="new_password" name="new_password" required>
+
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender" name="gender" required>
+
+                <label for="nationality">Nationality:</label>
+                <input type="text" id="nationality" name="nationality" required>
+
+                <label for="place_of_birth">Place of Birth:</label>
+                <input type="text" id="place_of_birth" name="place_of_birth" required>
+
+                <label for="stage_id">Stage ID:</label>
+                <input type="text" id="stage_id" name="stage_id" required>
+
+                <label for="grade_id">Grade ID:</label>
+                <input type="text" id="grade_id" name="grade_id" required>
+
+                <label for="section_id">Section ID:</label>
+                <input type="text" id="section_id" name="section_id" required>
+
+                <label for="topic">Topic:</label>
+                <input type="text" id="topic" name="topic" required>
+
+                <label for="semester">Semester:</label>
+                <input type="text" id="semester" name="semester" required>
+
+                <label for="relation">Relation:</label>
+                <input type="text" id="relation" name="relation" required>
+
+                <label for="raised_hands">Raised Hands:</label>
+                <input type="text" id="raised_hands" name="raised_hands" required>
+
+                <label for="visited_resources">Visited Resources:</label>
+                <input type="text" id="visited_resources" name="visited_resources" required>
+
+                <label for="announcements_view">Announcements View:</label>
+                <input type="text" id="announcements_view" name="announcements_view" required>
+
+                <label for="discussion">Discussion:</label>
+                <input type="text" id="discussion" name="discussion" required>
+
+                <label for="parent_answering_survey">Parent Answering Survey:</label>
+                <input type="text" id="parent_answering_survey" name="parent_answering_survey" required>
+
+                <label for="parent_school_satisfaction">Parent School Satisfaction:</label>
+                <input type="text" id="parent_school_satisfaction" name="parent_school_satisfaction" required>
+
+                <label for="student_absence_days">Student Absence Days:</label>
+                <input type="text" id="student_absence_days" name="student_absence_days" required>
+
+                <label for="class">Class:</label>
+                <input type="text" id="class" name="class" required>
+
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

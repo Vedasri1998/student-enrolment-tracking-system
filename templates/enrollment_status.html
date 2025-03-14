@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrollment Status</title>
+    <style>
+        /* CSS styles for the top bar dashboard */
+        .top-bar {
+            background-color: #2196F3;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* CSS styles for the enrollment status */
+        .enrollment-status {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .enrollment-status h2 {
+            margin-bottom: 20px;
+        }
+
+        .enrollment-status p {
+            margin-bottom: 10px;
+        }
+
+        .enrollment-status button {
+            padding: 10px 20px;
+            background-color: #2196F3;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">Enrollment Status</div>
+    <div class="enrollment-status">
+        <h2>Enrollment Successful!</h2>
+        <p>You have successfully enrolled in the following course:</p>
+        <p><strong>Student Name:</strong> {{ student_name }}</p>
+        <p><strong>Course Name:</strong> {{ course_name }}</p>
+        <button onclick="redirectToEnrollment()">Enroll in Another Course</button>
+    </div>
+    <script>
+        function redirectToEnrollment() {
+            window.location.href = '/enrollment';
+        }
+    </script>
+</body>
+</html>

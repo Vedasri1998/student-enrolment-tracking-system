@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrollment Report</title>
+    <style>
+        /* CSS styles for the top bar dashboard */
+        .top-bar {
+            background-color: #2196F3;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* CSS styles for the enrollment report */
+        .enrollment-report {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* CSS styles for the table headers */
+        th {
+            background-color: #2196F3;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">Enrollment Report</div>
+    <div class="enrollment-report">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Course Name</th>
+                    <th>Enrollment Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for enrollment in enrollments %}
+                <tr>
+                    <td>{{ enrollment['student_name'] }}</td>
+                    <td>{{ enrollment['course_name'] }}</td>
+                    <td>{{ enrollment['enrollment_status'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

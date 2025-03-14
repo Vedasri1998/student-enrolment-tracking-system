@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Tracker Dashboard</title>
+    <style>
+        /* CSS styles for the top bar dashboard */
+        .top-bar {
+            background-color: #2196F3;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
 
+        /* CSS styles for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* CSS styles for the table headers */
+        th {
+            background-color: #2196F3;
+            color: #fff;
+        }
+
+        /* CSS styles for the footer */
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* CSS styles for the filter dropdown */
+        .filter-dropdown {
+            margin-bottom: 10px;
+        }
+
+        /* CSS styles for the menu */
+        .menu {
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+        .menu a {
+            color: #000;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">Student Tracker Dashboard</div>
+    <div class="menu">
+        <a href="/index">Home</a>
+        <a href="/registration">Registration</a>
+        <a href="/courses">Courses</a>
+        <a href="/create_course">Create Course</a>
+        <a href="/edit_course">Edit Course</a>
+        <a href="/enrollment">Enrollment</a>
+        <a href="/enrollment_status">Enrollment Status</a>
+        <a href="/analytics">Analytics</a>
+        <a href="/enrollment_report">Enrollment Report</a>
+    </div>
+    <div class="filter-dropdown">
+        <form action="/index" method="POST">
+            <label for="range-filter">Select Range:</label>
+            <select id="range-filter" name="range_start">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <!-- Add more options as needed -->
+            </select>
+            <label for="range-end">to</label>
+            <select id="range-end" name="range_end">
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <!-- Add more options as needed -->
+            </select>
+            <button class="filter-button" type="submit">Filter</button>
+        </form>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Gender</th>
+                <th>Nationality</th>
+                <th>Place of Birth</th>
+                <th>Stage ID</th>
+                <th>Grade ID</th>
+                <th>Section ID</th>
+                <th>Topic</th>
+                <th>Semester</th>
+                <th>Relation</th>
+                <th>Raised Hands</th>
+                <th>Visited Resources</th>
+                <th>Announcements View</th>
+                <th>Discussion</th>
+                <th>Parent Answering Survey</th>
+                <th>Parent School Satisfaction</th>
+                <th>Student Absence Days</th>
+                <th>Class</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row['gender'] }}</td>
+                <td>{{ row['NationalITy'] }}</td>
+                <td>{{ row['PlaceofBirth'] }}</td>
+                <td>{{ row['StageID'] }}</td>
+                <td>{{ row['GradeID'] }}</td>
+                <td>{{ row['SectionID'] }}</td>
+                <td>{{ row['Topic'] }}</td>
+                <td>{{ row['Semester'] }}</td>
+                <td>{{ row['Relation'] }}</td>
+                <td>{{ row['raisedhands'] }}</td>
+                <td>{{ row['VisITedResources'] }}</td>
+                <td>{{ row['AnnouncementsView'] }}</td>
+                <td>{{ row['Discussion'] }}</td>
+                <td>{{ row['ParentAnsweringSurvey'] }}</td>
+                <td>{{ row['ParentschoolSatisfaction'] }}</td>
+                <td>{{ row['StudentAbsenceDays'] }}</td>
+                <td>{{ row['Class'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="footer">Student Tracker App &copy; 2023</div>
+</body>
+</html>
